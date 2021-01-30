@@ -59,7 +59,7 @@ if (userDataForm)
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
-    console.log(form);
+    //console.log(form);
     updateSettings(form, 'data');
   });
 
@@ -107,7 +107,7 @@ if (reviewPage) {
   const btnUpdate = document.querySelectorAll('.btn-update');
   const rating = document.querySelectorAll('#rating');
   const review = document.querySelectorAll('#review');
-  console.log({ rating, review });
+  //console.log({ rating, review });
   btnUpdate.forEach((btn, i) => {
     btn.addEventListener('click', e => {
       btn.textContent = 'Save';
@@ -115,7 +115,7 @@ if (reviewPage) {
       review[i].disabled = false;
       btn.addEventListener('click', e => {
         const reviewId = btn.dataset.reviewId;
-        console.log(rating[i].value);
+        // console.log(rating[i].value);
         btn.disabled = true;
         btn.textContent = 'Saving...';
         updateReview(reviewId, rating[i].value, review[i].value);
