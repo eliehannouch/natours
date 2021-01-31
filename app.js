@@ -38,19 +38,6 @@ app.use(helmet());
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'", 'https:', 'data:', 'ws:'],
-      baseUri: ["'self'"],
-      fontSrc: ["'self'", 'https:', 'data:'],
-      scriptSrc: ["'self'", 'https:', 'blob:'],
-      styleSrc: ["'self'", 'https:', 'unsafe-inline']
-    }
-  })
-);
-
-/*
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
       defaultSrc: ["'self'", 'https://*.mapbox.com', 'https://*.stripe.com'],
       baseUri: ["'self'"],
       fontSrc: ["'self'", 'https:', 'data:'],
@@ -69,7 +56,7 @@ app.use(
     }
   })
 );
-*/
+
 csp.extend(app, {
   policy: {
     directives: {
