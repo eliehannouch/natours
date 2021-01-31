@@ -32,7 +32,7 @@ body {
   font-weight: 300;
   font-family: 'Lato', sans-serif;
   color: #777;
-  padding: 3rem;
+  padding: 2rem;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,6 +41,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .main {
@@ -698,7 +699,7 @@ body {
   position: relative;
   max-width: 105rem;
   margin: 0 auto;
-  overflow: hidden;
+  /*overflow: hidden;*/
   overflow-y: scroll;
   background-color: #fff;
   padding: 9rem 5rem 9rem 21rem;
@@ -773,7 +774,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   border-radius: 3px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   overflow-y: scroll;
   -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.07);
   box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.07);
@@ -1092,7 +1093,7 @@ body {
 
 .card {
   border-radius: 3px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   overflow-y: scroll;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
