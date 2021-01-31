@@ -33,6 +33,21 @@ app.options('*', cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set security HTTP headers
+app.use(helmet());
+
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'", 'https:', 'data:', 'ws:'],
+      baseUri: ["'self'"],
+      fontSrc: ["'self'", 'https:', 'data:'],
+      scriptSrc: ["'self'", 'https:', 'blob:'],
+      styleSrc: ["'self'", 'https:', 'unsafe-inline']
+    }
+  })
+);
+
+/*
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -54,7 +69,7 @@ app.use(
     }
   })
 );
-
+*/
 csp.extend(app, {
   policy: {
     directives: {
