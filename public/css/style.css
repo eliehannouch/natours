@@ -41,7 +41,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow-y: scroll;
+ 
 }
 
 .main {
@@ -51,6 +51,7 @@ body {
   -ms-flex: 1;
   flex: 1;
   position: relative;
+  overflow-y: scroll;
 }
 
 .flex {
@@ -699,8 +700,7 @@ body {
   position: relative;
   max-width: 105rem;
   margin: 0 auto;
-  /*overflow: hidden;*/
-  overflow-y: scroll;
+  overflow: hidden;
   background-color: #fff;
   padding: 9rem 5rem 9rem 21rem;
   border-radius: 2rem;
@@ -774,8 +774,7 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   border-radius: 3px;
-  /*overflow: hidden;*/
-  overflow-y: scroll;
+  overflow: hidden;
   -webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.07);
   box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.07);
   display: -webkit-box;
@@ -1093,8 +1092,7 @@ body {
 
 .card {
   border-radius: 3px;
-  /*overflow: hidden;*/
-  overflow-y: scroll;
+  overflow: hidden;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
