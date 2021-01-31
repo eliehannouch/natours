@@ -1,7 +1,7 @@
 /* eslint-disable */
 import axios from 'axios';
 import { showAlert } from './alert';
-import { logoutAfterPasswordChange } from './login';
+
 // type is either 'password' or 'data'
 export const updateSettings = async (data, type) => {
   try {
@@ -44,13 +44,7 @@ export const updatePassword = async (
       }
     });
     if (res.data.status === 'success') {
-      showAlert(
-        'success',
-        'Your password is changed successfully. You will be logged out in 15 sec '
-      );
-      window.setTimeout(() => {
-        logoutAfterPasswordChange();
-      }, 15000);
+      showAlert('success', 'Your password is changed successfully.');
     }
   } catch (err) {
     showAlert('error', err.response.data.message);
